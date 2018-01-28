@@ -1,0 +1,1 @@
+% Comparaisons compressions 0 et opt

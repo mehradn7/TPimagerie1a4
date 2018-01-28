@@ -1,0 +1,1 @@
+% Calcul du module de la transformée de Fourier de l'image normalisée
