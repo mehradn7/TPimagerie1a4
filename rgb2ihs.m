@@ -7,16 +7,16 @@ nlig = size(image_rgb,1) ;
 ncol = size(image_rgb,2) ;
 image_ihs = zeros(nlig,ncol,3) ;
 %
-for nolig=1 :nlig,
-	for nocol=1 :ncol,
-		image_ihs(nolig,nocol, :) = M * double(squeeze(image_rgb(nolig,nocol, :))) ;
+for nolig = 1:nlig
+	for nocol = 1:ncol
+		image_ihs(nolig,nocol, :) = M * double(squeeze(image_rgb(nolig,nocol,:)));
 	end
 end
 %
 v1 = image_ihs( :, :,2) ;
 v2 = image_ihs( :, :,3) ;
 %
-H = atan2(v2,v1) ;
+H = atan2(v2,v1) ; 
 S = sqrt(v1.^2 + v2.^2) ;
 %
 image_ihs( :, :,2) = H ;
