@@ -22,3 +22,6 @@ S = sqrt(v1.^2 + v2.^2) ;
 image_ihs( :, :,2) = H ;
 image_ihs( :, :,3) = S ;
 end
+
+% "Que remarquons-nous ? "couleurs pures affichées en blanc
+% faire un profil ligne de l'image
