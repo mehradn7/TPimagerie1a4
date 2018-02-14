@@ -48,3 +48,6 @@ imshow(image_rgb/255) ;
 % correspondant au blanc (= 0). On va donc remplacer le jaune par la couleur 
 % à l'opposé dans l'anneau des teintes.
 % de même pour le noir : on ne peut pas remplacer une couleur par du noir.
+
+% pour le blanc: le bleu est remplacé par du vert car il y a une erreur
+% d'arrondi dans le calcul de l'angle.
