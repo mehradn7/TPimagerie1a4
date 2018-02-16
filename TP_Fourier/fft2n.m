@@ -1,1 +1,2 @@
-imfn = fft2(imn)/sqrt(nlig*ncol);
+imf = fft2(imn);
+imfn = imf/sqrt(nlig*ncol);
