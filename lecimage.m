@@ -12,7 +12,7 @@ else
 	return 
 end
 
-% image_ihs = rgb2ihs(image_rgb);
+
 % figure(2)
 % imshow(image_ihs(:,:,3));
 % Codage en IHS
