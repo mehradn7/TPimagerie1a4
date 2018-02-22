@@ -12,6 +12,9 @@ else
 	return 
 end
 
+% image_ihs = rgb2ihs(im);
+% figure(2)
+% imshow(image_ihs(:,:,3));
 % Codage en IHS
 
 % image_ih1h2s = rgbw2ih1h2s(im);
