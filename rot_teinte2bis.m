@@ -8,7 +8,7 @@ M = [1/6 1/6 1/6 1/6 ; -1/3 -1/3 -1/3 1 ; -sqrt(2)/3 -sqrt(2)/3 2*sqrt(2)/3 0 ; 
 %
 %
 % Lecture de l'image trimago ou jpeg qui va subir une rotation colorimétrique
-% lecimage ;
+lecimage ;
 im_depart = im ;
 %on sauvegarde l'image im dans im_depart
 %
@@ -201,5 +201,5 @@ image_rgb_filtre = (image_rgb_filtre>= 0).*image_rgb_filtre ;
 %
 %
 % Affichage
-% him = figure ('BackingStore','off','Name',['Rotation de teinte de ( ',num2str(theta0d),' ) degres'],'Units','pixels') ;
-% imshow(image_rgb_filtre/255)
+him = figure ('BackingStore','off','Name',['Rotation de teinte de ( ',num2str(theta0d),' ) degres'],'Units','pixels') ;
+imshow(image_rgb_filtre/255)
