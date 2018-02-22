@@ -17,7 +17,7 @@ for i = 1 :nlig
 			sintheta = (cx-i)/dist ;
 			costheta = (j-cy)/dist ;
 			angle = atan2(sintheta,costheta) ;
-            angle
+%             angle
 			image_ihs(i,j,2) = angle ;
 		else
 			image_ihs(i,j,1) = 0 ;

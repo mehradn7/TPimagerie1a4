@@ -33,19 +33,18 @@ disp(['Angle azimutal de la teinte de remplacement : ',num2str(psi2d),' degres']
 disp(['Angle de site de la teinte de remplacement : ',num2str(theta2d),' degres']) ;
 %
 % Calcul des angles de rotation
-psi = ? ?
-psid = ? ? %psi en degres
-theta = ? ?
-thetad = ? ? %theta en degres
+psi = image_ihs(x1,y1,2) - image_ihs(x2,y2,2);
+psid = (psi/pi)*180; %psi en degres
+theta = image_ihs(x1,y1,3) - image_ihs(x2,y2,3);
+thetad = (theta/pi)*180;%theta en degres
 %
-image_ihs( :, :,2) = ? ?
-image_ihs( :, :,3) = ? ?
+image_ihs( :, :,2) = image_ihs(:,:,2) - psi; %% JE NE SAIS PAS SI C'est juste
+image_ihs( :, :,3) = image_ihs(:,:,3) - theta;
 % Codage RGB
 image_rgb = ih1h2s2rgb(image_ihs) ;
 image_rgb = image_rgb( :, :,1 :3) ;
 %
-him = figure ('BackingStore','off ','Name',['Rotation de teinte de ( ',num2str(psid),' , ',num2str(thetad), ' ) de-
-gres'],'Units','pixels') ;
+him = figure ('BackingStore','off ','Name',['Rotation de teinte de ( ',num2str(psid),' , ',num2str(thetad), ') degres'],'Units','pixels');
 imshow(image_rgb/255) ;
 %image_rgb = image_rgb.*(image_rgb > =0) + (255-image_rgb).*(image_rgb > 255) ;
 %image(image_rgb/255) ;
